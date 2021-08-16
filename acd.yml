@@ -5,6 +5,8 @@ metadata:
   name: openshift-gitops
   namespace: openshift-gitops
 spec:
+  image: quay.io/pbmoses/pmo-argovault
+  version: v1.0
   applicationSet:
     resources:
       limits:
@@ -70,6 +72,8 @@ spec:
         cpu: 250m
         memory: 128Mi
   repo:
+    image: quay.io/pbmoses/pmo-argovault
+    serviceaccount: vault-openshift-plugin
     resources:
       limits:
         cpu: "1"
