@@ -1,5 +1,5 @@
 # kustomize_gitops_bootstrap
-To bootstrap gitops operator utilizing kustomize. 
+To bootstrap gitops operator utilizing kustomize. This utilizes DEX as well as the IBM ArgoCD plugin for secrets management. 
 1. clone
 2. kubectl kustomize build ./
 3. kubectl apply -k .
