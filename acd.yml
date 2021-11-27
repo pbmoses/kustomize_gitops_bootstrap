@@ -5,13 +5,6 @@ metadata:
   name: openshift-gitops
   namespace: openshift-gitops
 spec:
-  image: quay.io/pbmoses/pmo-argovault
-  version: v1.2
-  configManagementPlugins: |-
-    - name: argocd-vault-plugin
-      generate:
-        command: ["argocd-vault-plugin"]
-        args: ["generate", "./"]
   controller:
     processors: {}
   dex:
@@ -24,7 +17,6 @@ spec:
       enabled: false
   ha:
     enabled: false
-  image: quay.io/pbmoses/pmo-argovault
   initialSSHKnownHosts: {}
   prometheus:
     enabled: false
@@ -51,4 +43,3 @@ spec:
       type: ""
   tls:
     ca: {}
-  version: v1.2
